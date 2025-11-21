@@ -15,5 +15,9 @@ name = "quorum"
 version = "0.1.0"
 
 [[package]]
+name = "server"
+version = "0.1.0"
+
+[[package]]
 name = "storage"
 version = "0.1.0"

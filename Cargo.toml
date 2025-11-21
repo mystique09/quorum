@@ -7,7 +7,7 @@ description = "A distributed consensus engine and fault-tolerant log store built
 [dependencies]
 
 [workspace]
-members = ["crates/core", "crates/network", "crates/storage"]
+members = ["bin/*", "crates/*"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -18,3 +18,7 @@ bincode = "2.0.1"
 redb = "3.1.0"
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.16", features = ["env", "fmt"] }
+
+[[bin]]
+name = "server"
+path = "bin/server/src/main.rs"
