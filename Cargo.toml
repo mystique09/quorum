@@ -2,5 +2,19 @@
 name = "quorum"
 version = "0.1.0"
 edition = "2024"
+description = "A distributed consensus engine and fault-tolerant log store built in Rust using Raft."
 
 [dependencies]
+
+[workspace]
+members = ["crates/core", "crates/network", "crates/storage"]
+resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+tarpc = { version = "0.37.0", features = ["tokio1"] }
+serde = { version = "1", features = ["derive"] }
+bincode = "2.0.1"
+redb = "3.1.0"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.16", features = ["env", "fmt"] }
